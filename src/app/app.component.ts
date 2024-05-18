@@ -1,16 +1,28 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ProductComponent } from './product/product.component';
+import { ServicesComponent } from './services/services.component';
+import { CategoryComponent } from './category/category.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [ProductComponent, ServicesComponent, CategoryComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  name = 'Arome';
-  printData(){
-    
+  name: string = 'Arome';
+
+  isAvailable: boolean = true;
+
+  imgUrl =
+    'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR2v8jGQFEHwDE0bEIm2Sofs-0n5RUWyiNtY_JQw46IozVB-YPU';
+
+  inputType = 'password';
+
+  printData() {
+    console.log('Hello');
+
+    this.isAvailable = !this.isAvailable;
   }
 }
