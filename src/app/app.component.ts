@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ProductComponent } from './product/product.component';
 import { ServicesComponent } from './services/services.component';
+import { CategoryComponent } from './category/category.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ProductComponent, ServicesComponent],
+  imports: [ProductComponent, ServicesComponent, CategoryComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
