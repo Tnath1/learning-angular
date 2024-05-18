@@ -1,5 +1,16 @@
-<h1>Hello {{name}}</h1>
-<br/>
- <button (click)="printData()">click</button>
- <br/>
- <img [src]="imgUrl" height="200px">
+<h1>Hello {{ name }}</h1>
+<br />
+<button (click)="printData()">click</button>
+
+<br />
+
+<img [src]="imgUrl" height="200px" />
+
+<br />
+
+<input [type]="inputType" />
+
+<div class="circle" [class.available]="isAvailable"></div>
+
+<app-product />
+<app-services />
